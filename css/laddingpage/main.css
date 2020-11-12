@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+@keyframes up{ 
+	0%{ transform: translateY(0%); }
+  100%{ transform: translateY(-100%); }
+		}
+@keyframes emerge{ 
+	0%{  transform-origin: 0% 100%;
+				height: 0%;}
+  100%{ height: 100%;  
+				transform-origin: 0% 100%;}
+		}
+:root{
+	--top: 4%;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	font-size: 11px;
+}
+*::-webkit-scrollbar {/*hidde scrollbar*/
+    display: none;
+}
+
+a{
+	text-decoration: none;
+}
+h1{
+    font-size: -webkit-xxx-large;
+		margin: var(--top) 0 var(--top) 0;
+			text-align: center;
+}	
+h2{
+	font-size: x-large;
+		text-align: center;
+	}
+	h2:hover, .underflow_box > div:nth-child(1) > p:nth-child(1):hover{
+		text-decoration: line-through;
+		color: gray;
+	}
+body{
+	display: grid;
+	grid-template-columns: 65% 35% ;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden; 
+}
+main{
+	position: relative;
+	display: grid;
+	grid-template-rows: 100% 100%;	
+ 	height: 100%;
+ }
+ 
+aside{
+ height: 100%;
+ background-color: whitesmoke;
+}
+.asideTransition{
+	background-color: black;
+	color: white;
+}
+
+.transition{
+	animation: emerge 1s;
+	animation-duration: 3s;
+	animation-fill-mode:forwards;
+	transform-origin: bottom;
+}
+/*---------------------------------*/
+
+
+.underflow_box, .overflow_box.left {
+	display: grid;
+	grid-template-columns: 1fr 2fr  ;
+	z-index: 0;
+	height: 100%; 
+	background-color: black;
+	color:whitesmoke;
+}
+.underflow_box > div p, .overflow_box.left > div p{
+margin: 10% 0 0 25%;
+}
+.underflow_box > div:nth-child(1), .overflow_box.left > div:nth-child(1){
+		margin-top: var(--top);
+	position: relative;
+	display: grid;
+	grid-template-rows: auto 50px auto;
+	height: 100%; 
+	align-content:stretch;
+}
+.statics_photos.bottom{
+max-width:130%;
+max-height:100%;
+justify-self: stretch;
+align-self: end;
+}
+ .statics_photos.aside{
+	position: absolute;
+	max-width: 61%;
+  bottom: 279px;
+  right: -155px;
+   /*border-top-left-radius: 50%; */
+    /* border-bottom-right-radius: 50%; */
+    /* border-bottom-left-radius: 50%; */
+    /* border-top-right-radius: 50%; */
+}
+.overflow_box.left,.overflow_box.right{
+	display: none;
+	z-index: 1;
+	height:100%;
+	background-color:whitesmoke;
+	animation: up 1s;
+	animation-duration: 3s;
+	animation-fill-mode:backwards;
+	color:black;
+}
+.overflow_box.right{
+	background-color:black;
+	animation-direction: reverse;
+	color:whitesmoke;
+	padding-top: 60%;
+	text-align: center;
+}
+ 
+aside{
+	position: relative;
+	text-align: right;
+}
+

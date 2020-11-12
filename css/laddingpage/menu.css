@@ -1,0 +1,40 @@
+.exitBtn{
+	position: absolute;
+    top: var(--top);
+		left: 50%;
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+		z-index: 3;	
+}
+.pile{
+	position: relative;
+	background-color: ghostwhite;
+	height: 2px;
+}
+div.exitBtn > div:nth-child(1){
+	width: 15px;
+	transition: all 0.2s linear;
+}
+div.exitBtn:hover div:nth-child(1){
+	transform: translateX(-5px) translateY(7px) rotate(45deg);
+	width: 30px;
+}
+div.exitBtn > div:nth-child(2){
+	width: 20px;
+	transition: all 0.2s linear;
+}
+div.exitBtn:hover div:nth-child(2){
+	transform: scale(0);
+}
+div.exitBtn > div:nth-child(3){
+	width: 10px;
+	transition: all 0.2s linear;
+}
+div.exitBtn:hover div:nth-child(3){
+	transform: translateX(-5px) translateY(-7px) rotate(-45deg);
+	width: 30px;
+}
