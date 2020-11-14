@@ -1,15 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-@keyframes up{ 
-	0%{ transform: translateY(0%); }
-  100%{ transform: translateY(-100%); }
+@keyframes fadeInUp{ 
+	0%{ opacity: 0.9; transform: translateY(0%); }
+  100%{ opacity: 1; transform: translateY(-100%); }
 		}
-@keyframes emerge{ 
-	0%{  transform-origin: 0% 100%;
-				height: 0%;}
-  100%{ height: 100%;  
-				transform-origin: 0% 100%;}
+@keyframes fadeInUpReverse{ 
+	0%{ opacity: 0.9; transform: translateY(100%); }
+  100%{ opacity: 1; transform: translateY(0%); }
 		}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+  opacity: 0.9;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  }
+  @keyframes fadeInDown {
+  0% {
+  opacity: 0.9;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+  } 
 :root{
 	--top: 4%;
 }
@@ -36,7 +59,8 @@ h2{
 	font-size: x-large;
 		text-align: center;
 	}
-	h2:hover, .underflow_box > div:nth-child(1) > p:nth-child(1):hover{
+h2:hover, 
+.underflow_main > div:nth-child(1) > p:nth-child(1):hover{
 		text-decoration: line-through;
 		color: gray;
 	}
@@ -47,44 +71,39 @@ body{
 	height: 100vh;
 	overflow: hidden; 
 }
-main{
+main, aside{
 	position: relative;
 	display: grid;
 	grid-template-rows: 100% 100%;	
- 	height: 100%;
+ 	height: 100vh;
  }
  
 aside{
- height: 100%;
+ height: 100vh;
  background-color: whitesmoke;
+position: relative;
+text-align: right;
 }
-.asideTransition{
-	background-color: black;
-	color: white;
+.underflow_aside{
+	height: 100%;
 }
-
-.transition{
-	animation: emerge 1s;
-	animation-duration: 3s;
-	animation-fill-mode:forwards;
-	transform-origin: bottom;
-}
-/*---------------------------------*/
-
-
-.underflow_box, .overflow_box.left {
+.underflow_main{
 	display: grid;
-	grid-template-columns: 1fr 2fr  ;
 	z-index: 0;
 	height: 100%; 
 	background-color: black;
 	color:whitesmoke;
+	}
+.underflow_main, .overflow_main {
+	grid-template-columns: 1fr 2fr  ;
 }
-.underflow_box > div p, .overflow_box.left > div p{
+.underflow_main > div p, 
+.overflow_main > div p{
 margin: 10% 0 0 25%;
 }
-.underflow_box > div:nth-child(1), .overflow_box.left > div:nth-child(1){
-		margin-top: var(--top);
+.underflow_main > div:nth-child(1), 
+.overflow_main > div:nth-child(1){
+	margin-top: var(--top);
 	position: relative;
 	display: grid;
 	grid-template-rows: auto 50px auto;
@@ -107,26 +126,41 @@ align-self: end;
     /* border-bottom-left-radius: 50%; */
     /* border-top-right-radius: 50%; */
 }
-.overflow_box.left,.overflow_box.right{
+
+.overflow_main,.overflow_aside{
 	display: none;
-	z-index: 1;
 	height:100%;
-	background-color:whitesmoke;
-	animation: up 1s;
-	animation-duration: 3s;
-	animation-fill-mode:backwards;
-	color:black;
 }
-.overflow_box.right{
+.overflow_main{
+	background-color:whitesmoke;
+	color:black;
+
+	}	
+.overflow_aside{
+	animation-fill-mode: forwards;
 	background-color:black;
-	animation-direction: reverse;
 	color:whitesmoke;
 	padding-top: 60%;
 	text-align: center;
+
 }
- 
-aside{
-	position: relative;
-	text-align: right;
+.scale-up-ver-top_transition{
+	/*z-index: 1;*/
+	animation: fadeInUp 1s;
+	animation-duration: 1s;
 }
+
+.reverse_scale-up-ver-top_transition{
+	display: none;
+	animation: fadeInUpReverse;
+	animation-duration: 1s;
+}
+.scale-up-ver-bottom_transition{
+	/*z-index: 1;*/
+	-webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
 
