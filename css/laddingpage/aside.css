@@ -1,11 +1,15 @@
 @keyframes zooming{
-	from{
-				
-				transform: scale(0);
-				background-color: rgba(245, 245, 245, 0%);
-	}to{
-				transform: scale(1);
-				background-color: rgba(245, 245, 245, 100%);
+	from{		font-size: 0;
+					width: 13%;
+					height: 12%;
+	}99.9%{
+			font-size: 0;
+	}
+	
+	to{
+					width: 100%;
+					height: 100%;
+					font-size: 11px;
 	}
 }
 aside p{
@@ -25,11 +29,10 @@ margin: 10% 10% 0 10%;
     grid-template-areas:
         ". one"
         "two one"
-        "two ."
-        ". three"
+        "two three"
         "four three"
-        "four ."
-        ". five";
+        "four five"
+        ". five"
 	}
 #overflow_photosCtnr > div > div:nth-child(1){
 	grid-area: one;
@@ -59,34 +62,43 @@ margin: 10% 10% 0 10%;
     width: 100%;
     height: 300px;
 }
+.overflows.photos:hover .overflows.photos.innerBox{
+	opacity: 1;
+}
+.overflows.photos.innerBox::before{
+	content: "A VIE est une question d'équilibre, trouver l'équilibre parfait et avoir un peu de noir et un peu de blanc dans ses jour";
+	text-align: justify;
+}
+
 .overflows.photos.innerBox{
-	background: none;
-	width: 100%;
-	bottom: 20px;
-	right: 20px;
+	opacity: 0;
+	position: absolute;
+	background: white;
+	width: 13%;
+	min-width:20px ;
+	height: 12%;
+	min-height: 20px;
   transform-origin: bottom right 20px;
 	pointer-events: auto;
 	display: flex; justify-content: center; align-items: center;
 	text-align: justify;
-}
-.info{
-	position: absolute;
+	padding: 10% 10% 10% 10%;
+	font-size: 0;
 	right: 11px;
 	bottom:11px;
+}
+.overflows.photos.innerBox:hover{
+animation: zooming ; 
+animation-duration: 1s;
+animation-fill-mode: forwards;
+animation-timing-function: ease-out;
+}
+
+.info{
+	position: absolute;
+	bottom:5px ;
+	right:5px ;
 	pointer-events: auto; /*on hover child changes parent */
 }
 
-.overflows.photos.innerBox:hover, .overflows.photos.innerBox:focus{
-animation: zooming 2s; 
-animation-duration: 1s;
-animation-fill-mode: forwards;
-animation-timing-function: ease-in-out;
-}
-.overflows.photos.innerBox p{
-	padding:0 10% 0 15%;
-	visibility: hidden;
-}
 
-.info:hover ~ .overflows.photos.innerBox > p{
-	visibility: visible;
-} 

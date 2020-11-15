@@ -16,34 +16,42 @@ let changeButtonColorDelay=1000;
 				if(overflowRightBox.style.display == "" ){
 					
 						//*mudar o display do overflow_main e do overflow_aside para "grid" e "block"
-					//	overflowLetfBox.style.zIndex =  z_Indix++;
-					//	overflowRightBox.style.zIndex = overflowLetfBox.style.zIndex
 						overflowLetfBox.style.display = "grid";
 						overflowRightBox.style.display = "block";
 						overflowLetfBox.classList.add("scale-up-ver-top_transition")
+						overflowLetfBox.style.zIndex =  ++z_Indix;
 						overflowLetfBox.style.animationFillMode = "forwards"
 						overflowRightBox.classList.add("scale-up-ver-bottom_transition");
+						overflowRightBox.style.zIndex = z_Indix;
 						overflowRightBox.style.animationFillMode = "forwards"
 						//*mudar a cor do exit Button
 						setTimeout(()=>{
 							for(let i= 0; i<exitBtnColor.length; i++){
 								exitBtnColor[i].style.backgroundColor = 'black';}
+								//remove animations
+								underflowBox.classList.remove("scale-up-ver-bottom_transition")
+								asideBox.classList.remove("scale-up-ver-top_transition")
 							},changeButtonColorDelay);	
-					
 				}		 	
 		//senao
 			else{
-		
-						overflowLetfBox.classList.add("scale-up-ver-top_transition")
-						overflowLetfBox.style.animationFillMode = "forwards"
-						overflowLetfBox.style.animationDirection= "reverse"
-						overflowRightBox.classList.add("scale-up-ver-bottom_transition");
-						overflowRightBox.style.animationFillMode = "forwards"
-						overflowRightBox.style.animationDirection= "reverse"
-						//*mudar a cor do exit Button
+	
+				underflowBox.classList.add("scale-up-ver-bottom_transition");
+						underflowBox.style.zIndex =  ++z_Indix;
+						underflowBox.style.animationFillMode = "forwards";
+
+					asideBox.classList.add("scale-up-ver-top_transition")
+						asideBox.style.zIndex = z_Indix;
+						asideBox.style.animationFillMode = "backwards";
+					//*mudar a cor do exit Button
 						setTimeout(()=>{
 							for(let i= 0; i<exitBtnColor.length; i++){
-								exitBtnColor[i].style.backgroundColor = 'black';}
-							},changeButtonColorDelay);
+								exitBtnColor[i].style.backgroundColor = 'white';
+								}
+								overflowRightBox.style.display = "";
+								//remove animations
+								overflowLetfBox.classList.remove("scale-up-ver-top_transition")
+								overflowRightBox.classList.remove("scale-up-ver-bottom_transition")
+							},changeButtonColorDelay);	
 			}
 		},500)}) 

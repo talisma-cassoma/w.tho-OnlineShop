@@ -86,10 +86,13 @@ text-align: right;
 }
 .underflow_aside{
 	height: 100%;
+	background-color: white;
+	/*animation: fadeInUp 1s;
+    animation-duration: 1s;
+animation-fill-mode: forwards;*/
 }
 .underflow_main{
 	display: grid;
-	z-index: 0;
 	height: 100%; 
 	background-color: black;
 	color:whitesmoke;
@@ -146,7 +149,7 @@ align-self: end;
 }
 .scale-up-ver-top_transition{
 	/*z-index: 1;*/
-	animation: fadeInUp 1s;
+	animation: fadeInUp;
 	animation-duration: 1s;
 }
 
@@ -164,3 +167,8 @@ align-self: end;
 }
 
 
+@media screen and (max-width: 1024px){
+	.underflow_main > div:nth-child(1), .overflow_main > div:nth-child(1){
+		display: none;
+	}
+}
