@@ -37,20 +37,12 @@ let changeButtonColorDelay=1000;
 							let subtittles = document.querySelectorAll(".subtittle")
 							for(let i= 0; i<subtittles.length; i++){
 								subtittles[i].classList.add("textTransition")
-								subtittles[i].style.animationDelay = i +'s';
+								subtittles[i].style.animationDelay =( i-0.5 )+'s';
 							}		
 				}		 	
 		//senao
 			else{
-						//ativar a subtittleTransion
-							let subtittles = document.querySelectorAll(".subtittle")
-							for(let i= 0; i<subtittles.length; i++){
-								subtittles[i].classList.add("textTransition")
-								subtittles[i].style.animationDirection = "reverse"
-								subtittles[i].style.animationDelay = (subtittles.length/2) +'s';
-								
-							}	
-
+	
 				underflowBox.classList.add("scale-up-ver-bottom_transition");
 						underflowBox.style.zIndex =  ++z_Indix;
 						underflowBox.style.animationFillMode = "forwards";
@@ -67,6 +59,11 @@ let changeButtonColorDelay=1000;
 								//remove animations
 								overflowLetfBox.classList.remove("scale-up-ver-top_transition")
 								overflowRightBox.classList.remove("scale-up-ver-bottom_transition")
+								//desativar a subtittleTransion
+							let subtittles = document.querySelectorAll(".subtittle")
+							for(let i= 0; i<subtittles.length; i++){
+								subtittles[i].classList.remove("textTransition")
+							}		
 							},changeButtonColorDelay);
 
 			}
