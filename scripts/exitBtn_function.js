@@ -29,8 +29,8 @@ let changeButtonColorDelay=1000;
 							for(let i= 0; i<exitBtnColor.length; i++){
 								exitBtnColor[i].style.backgroundColor = 'black';}
 								//remove animations
-								underflowBox.classList.remove("scale-up-ver-bottom_transition")
-								asideBox.classList.remove("scale-up-ver-top_transition")
+								underflowBox.classList.remove("under_main-Transition")
+								asideBox.classList.remove("underFlow_aside-Transition")
 							},changeButtonColorDelay);
 							
 							//ativar a subtittleTransion
@@ -43,13 +43,14 @@ let changeButtonColorDelay=1000;
 		//senao
 			else{
 	
-				underflowBox.classList.add("scale-up-ver-bottom_transition");
+				underflowBox.classList.add("under_main-Transition");
 						underflowBox.style.zIndex =  ++z_Indix;
 						underflowBox.style.animationFillMode = "forwards";
-
-					asideBox.classList.add("scale-up-ver-top_transition")
+					setTimeout(()=>{
+					asideBox.classList.add("underFlow_aside-Transition")
 						asideBox.style.zIndex = z_Indix;
 						asideBox.style.animationFillMode = "backwards";
+
 					//*mudar a cor do exit Button
 						setTimeout(()=>{
 							for(let i= 0; i<exitBtnColor.length; i++){
@@ -65,6 +66,7 @@ let changeButtonColorDelay=1000;
 								subtittles[i].classList.remove("textTransition")
 							}		
 							},changeButtonColorDelay);
+					},200)
 
 			}
 		},500)}) 

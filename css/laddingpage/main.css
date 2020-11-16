@@ -4,9 +4,13 @@
 	0%{ opacity: 0.9; transform: translateY(0%); }
   100%{ opacity: 1; transform: translateY(-100%); }
 		}
-@keyframes fadeInUpReverse{ 
+@keyframes goUp{ 
 	0%{ opacity: 0.9; transform: translateY(100%); }
   100%{ opacity: 1; transform: translateY(0%); }
+		}
+@keyframes test{ 
+	from{ opacity: 0.9; transform: translateY(0%); }
+  to{ opacity: 1; transform: translateY(-100%)}
 		}
 
 @-webkit-keyframes fadeInDown {
@@ -186,11 +190,16 @@ align-self: end;
 	animation: fadeInUp;
 	animation-duration: 1s;
 }
-
-.reverse_scale-up-ver-top_transition{
-	display: none;
-	animation: fadeInUpReverse;
+.underFlow_aside-Transition{
+	animation: test;
+	/*animation-delay: 0.2s;*/
 	animation-duration: 1s;
+}
+.under_main-Transition{
+	-webkit-animation-name:goUp;
+  animation-name:goUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 .scale-up-ver-bottom_transition{
 	/*z-index: 1;*/
