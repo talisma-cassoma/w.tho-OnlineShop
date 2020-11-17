@@ -17,7 +17,7 @@ let changeButtonColorDelay=1000;
 					
 						//*mudar o display do overflow_main e do overflow_aside para "grid" e "block"
 						overflowLetfBox.style.display = "grid";
-						overflowRightBox.style.display = "block";
+						overflowRightBox.style.display = "grid";
 						overflowLetfBox.classList.add("scale-up-ver-top_transition")
 						overflowLetfBox.style.zIndex =  ++z_Indix;
 						overflowLetfBox.style.animationFillMode = "forwards"
