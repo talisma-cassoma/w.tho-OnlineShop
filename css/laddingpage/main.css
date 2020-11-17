@@ -189,11 +189,6 @@ align-self: end;
 	max-width: 61%;
   bottom: 208px;
   right: -138px;
-    /* border-top-left-ra
-   /*border-top-left-radius: 50%; */
-    /* border-bottom-right-radius: 50%; */
-    /* border-bottom-left-radius: 50%; */
-    /* border-top-right-radius: 50%; */
 }
 
 .overflow_main,.overflow_aside{
@@ -230,6 +225,9 @@ footer{
 	color:whitesmoke;
 	text-align: center;
 }
+.overflow_aside > p:nth-child(1){
+	text-align: end;
+}
 .scale-up-ver-top_transition{
 	/*z-index: 1;*/
 	animation: fadeInUp;
@@ -253,12 +251,18 @@ footer{
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
-.subtittle{
+.subtittle, .asidetext{
 	opacity: 0;
 }
 .textTransition{
 	animation-name: fade-in-right;
 	animation-duration: 0.15s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+.asidetextTransition{
+	animation-name: fade-in-up;
+	animation-duration: 0.2s;
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
 }

@@ -21,6 +21,12 @@ let changeButtonColorDelay=1000;
 						overflowLetfBox.classList.add("scale-up-ver-top_transition")
 						overflowLetfBox.style.zIndex =  ++z_Indix;
 						overflowLetfBox.style.animationFillMode = "forwards"
+							let asideBoxtext = document.querySelectorAll(".asidetext")
+							for(let i= 0; i<asideBoxtext.length; i++){
+								asideBoxtext[i].classList.add("asidetextTransition")
+								asideBoxtext[i].style.animationDelay = i + 0.5 +'s';
+								asideBoxtext[0].style.animationDelay = 0.5 +'s';
+							}
 						overflowRightBox.classList.add("scale-up-ver-bottom_transition");
 						overflowRightBox.style.zIndex = z_Indix;
 						overflowRightBox.style.animationFillMode = "forwards"
@@ -38,7 +44,8 @@ let changeButtonColorDelay=1000;
 							for(let i= 0; i<subtittles.length; i++){
 								subtittles[i].classList.add("textTransition")
 								subtittles[i].style.animationDelay =( i-0.5 )+'s';
-							}		
+								subtittles[0].style.animationDelay =0.5 + 's'
+							}			
 				}		 	
 		//senao
 			else{
@@ -64,7 +71,10 @@ let changeButtonColorDelay=1000;
 							let subtittles = document.querySelectorAll(".subtittle")
 							for(let i= 0; i<subtittles.length; i++){
 								subtittles[i].classList.remove("textTransition")
-							}		
+							}
+							let asideBoxtext = document.querySelectorAll(".asidetext")
+							for(let i= 0; i<asideBoxtext.length; i++){
+								asideBoxtext[i].classList.remove("asidetextTransition")}		
 							},changeButtonColorDelay);
 					},200)
 
