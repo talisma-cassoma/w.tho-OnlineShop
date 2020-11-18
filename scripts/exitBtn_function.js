@@ -10,31 +10,37 @@ let changeButtonColorDelay=1000;
 						let exitBtnColor = document.querySelectorAll('.pile');
 						let asideBox = document.querySelector('.underflow_aside');
 						var underflowBox = document.querySelector('.underflow_main');
-						
+						let contacts = document.querySelector('.contacts');
+						let socialIcon = document.querySelectorAll('.social-icon');
 						exitButton.style.zIndex =  z_Indix + 3;
+						contacts.style.zIndex = exitButton.style.zIndex;
 		//se display do overflow_main e do 		overflow_aside for 'none' executa:
 				if(overflowRightBox.style.display == "" ){
 					
 						//*mudar o display do overflow_main e do overflow_aside para "grid" e "block"
 						overflowLetfBox.style.display = "grid";
 						overflowRightBox.style.display = "grid";
-						overflowLetfBox.classList.add("scale-up-ver-top_transition")
+						//mudar o z-index e adicionar as transitions 
+						overflowLetfBox.classList.add("overflow_aside_transition")
 						overflowLetfBox.style.zIndex =  ++z_Indix;
 						overflowLetfBox.style.animationFillMode = "forwards"
 							let asideBoxtext = document.querySelectorAll(".asidetext")
-							for(let i= 0; i<asideBoxtext.length; i++){
+							for(let i= 0; i<asideBoxtext.length; i++){//trasitions do texto
 								asideBoxtext[i].classList.add("asidetextTransition")
 								asideBoxtext[i].style.animationDelay = i + 0.5 +'s';
 								asideBoxtext[0].style.animationDelay = 0.5 +'s';
 							}
-						overflowRightBox.classList.add("scale-up-ver-bottom_transition");
+						overflowRightBox.classList.add("overflow_main_transition");
 						overflowRightBox.style.zIndex = z_Indix;
 						overflowRightBox.style.animationFillMode = "forwards"
 						//*mudar a cor do exit Button
 						setTimeout(()=>{
 							for(let i= 0; i<exitBtnColor.length; i++){
-								exitBtnColor[i].style.backgroundColor = 'black';}
-								//remove animations
+								exitBtnColor[i].style.backgroundColor = 'black';
+								for(let j= 0; j<socialIcon.length; j++){
+								socialIcon[j].style.color = 'white';}
+								}
+								//remove transitions
 								underflowBox.classList.remove("under_main-Transition")
 								asideBox.classList.remove("underFlow_aside-Transition")
 							},changeButtonColorDelay);
@@ -49,7 +55,7 @@ let changeButtonColorDelay=1000;
 				}		 	
 		//senao
 			else{
-	
+					//mudar o z-index e adicionar as transitions
 				underflowBox.classList.add("under_main-Transition");
 						underflowBox.style.zIndex =  ++z_Indix;
 						underflowBox.style.animationFillMode = "forwards";
@@ -62,11 +68,13 @@ let changeButtonColorDelay=1000;
 						setTimeout(()=>{
 							for(let i= 0; i<exitBtnColor.length; i++){
 								exitBtnColor[i].style.backgroundColor = 'white';
+								for(let j= 0; j<socialIcon.length; j++){
+								socialIcon[j].style.color = 'black';}
 								}
 								overflowRightBox.style.display = "";
-								//remove animations
-								overflowLetfBox.classList.remove("scale-up-ver-top_transition")
-								overflowRightBox.classList.remove("scale-up-ver-bottom_transition")
+								//remove transitions
+								overflowLetfBox.classList.remove("overflow_aside_transition")
+								overflowRightBox.classList.remove("overflow_main_transition")
 								//desativar a subtittleTransion
 							let subtittles = document.querySelectorAll(".subtittle")
 							for(let i= 0; i<subtittles.length; i++){

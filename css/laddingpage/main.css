@@ -8,10 +8,6 @@
 	0%{ opacity: 0.9; transform: translateY(100%); }
   100%{ opacity: 1; transform: translateY(0%); }
 		}
-@keyframes test{ 
-	from{ opacity: 0.9; transform: translateY(0%); }
-  to{ opacity: 1; transform: translateY(-100%)}
-		}
 
 @-webkit-keyframes fadeInDown {
   0% {
@@ -37,7 +33,6 @@
   transform: none;
   }
   } 
-
 
 	@-webkit-keyframes fade-in-right {
   0% { opacity: 0;
@@ -90,6 +85,8 @@
 }
 :root{
 	--top: 4%;
+	--exitButton-size: 21.6px;
+	--pile-size: 30px;
 }
 *{
 	margin: 0;
@@ -97,12 +94,13 @@
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
 	font-size: 10px;
+	  text-decoration: none;
 }
 *::-webkit-scrollbar {/*hidde scrollbar*/
     display: none;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 h1{
@@ -115,6 +113,7 @@ h2{
 	/*font-size: x-large;*/
 	font-size: 4vh;
 	padding-left: 40%;
+	color: whitesmoke;
 	}
 main h2:hover{
 text-decoration: line-through;
@@ -130,7 +129,8 @@ body{
 	grid-template-columns: 65% 35% ;
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden; 
+	overflow: hidden;/* stop scroll*/
+	position:fixed; /*fixe body on screen*/
 }
 main, aside{
 	position: relative;
@@ -150,11 +150,8 @@ padding: 0;
 }
 
 .underflow_aside{
-	height: 100%;
+	height: 100vh;
 	background-color: white;
-	/*animation: fadeInUp 1s;
-    animation-duration: 1s;
-animation-fill-mode: forwards;*/
 }
 .underflow_main{
 	display: grid;
@@ -228,14 +225,12 @@ footer{
 .overflow_aside > p:nth-child(1){
 	text-align: end;
 }
-.scale-up-ver-top_transition{
-	/*z-index: 1;*/
+.overflow_aside_transition{
 	animation: fadeInUp;
 	animation-duration: 1s;
 }
 .underFlow_aside-Transition{
-	animation: test;
-	/*animation-delay: 0.2s;*/
+	animation: fadeInUp;
 	animation-duration: 1s;
 }
 .under_main-Transition{
@@ -244,8 +239,7 @@ footer{
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
-.scale-up-ver-bottom_transition{
-	/*z-index: 1;*/
+.overflow_main_transition{
 	-webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
   -webkit-animation-duration: 1s;
@@ -253,6 +247,9 @@ footer{
 }
 .subtittle, .asidetext{
 	opacity: 0;
+}
+.subtittle{
+	color: black;
 }
 .textTransition{
 	animation-name: fade-in-right;
@@ -267,7 +264,17 @@ footer{
 	animation-fill-mode: forwards;
 }
 @media screen and (max-width: 1024px){
+	:root{
+	--exitButton-size: 20.8px;
+	--pile-size: 20px;
+}
 	.underflow_main > div:nth-child(1), .overflow_main > div:nth-child(1){
 		display: none;
 	}
+	.overflow_main {
+    grid-template-areas:
+        "RIGHT ."
+        "DOWN DOWN";
+}
+
 }

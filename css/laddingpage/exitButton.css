@@ -3,8 +3,8 @@
     top: var(--top);
 		left: 50%;
     display: grid;
-    width: 2rem;
-    height: 2rem;
+    width: var(--exitButton-size);
+    height: var(--exitButton-size);
     border-radius: 50%;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@ div.exitBtn > div:nth-child(1){
 }
 div.exitBtn:hover div:nth-child(1){
 	transform: translateX(-5px) translateY(7px) rotate(45deg);
-	width: 30px;
+	width: var(--pile-size);
 }
 div.exitBtn > div:nth-child(2){
 	width: 20px;
@@ -35,5 +35,5 @@ div.exitBtn > div:nth-child(3){
 }
 div.exitBtn:hover div:nth-child(3){
 	transform: translateX(-5px) translateY(-7px) rotate(-45deg);
-	width: 30px;
+	width: var(--pile-size);
 }

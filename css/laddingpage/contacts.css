@@ -1,0 +1,64 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+.contacts{
+	position: absolute;
+    font-family: 'Lato', sans-serif;
+    color: #FFF;
+    -webkit-font-smoothing: antialiased;
+		 width: 2%;
+    display: block;
+    /* margin: 0 auto; */
+    right: 1%;
+		bottom:10% ;
+		z-index: 3;
+}
+
+ul {
+    padding:0;
+    list-style: none;
+}
+.social-icon {
+    color: black;
+		-o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+		font-size: 2em;
+}
+.icon {
+    color: black;}
+ul.social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: grid;
+		height: 5vh;
+}
+.social-icons a {
+    text-decoration: none;
+}
+.fa-facebook:hover {
+    color: #3d5b99;
+}
+
+.fa-twitter:hover {
+    color: #00aced;
+}
+
+.fa-rss:hover {
+    color: #eb8231;
+}
+
+.fa-youtube:hover {
+  color: #e64a41;
+}
+
+.fa-linkedin:hover {
+  color: #0073a4;
+}
+
+.fa-github:hover {
+    color: #5a32a3;
+}
