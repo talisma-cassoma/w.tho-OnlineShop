@@ -26,7 +26,7 @@ get somes photos from my friend photographer
 
 **ORIGINAL DESIGN**
 <p align="center">
-  <img alt="gif" src="layout.gif" width="80%">
+  <img alt="gif" src="layoutDesign.gif" width="80%">
 </p>
 
 <p align="center">
