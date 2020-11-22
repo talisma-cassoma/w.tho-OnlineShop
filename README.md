@@ -12,5 +12,8 @@
 - dark-mode
 
 ## Preview
+<p align="center">
+  <img alt="pag1" src="pag1.jpg" width="80%">
+</p>
 
 
