@@ -1,6 +1,6 @@
-# UI Clone: Instagramw.tho - Online Shop
+# UI Clone: w.tho - Online Shop
 
- w.tho is an online shop website, which a design with layout and typography experiments. made with CSS HTML and javaScript credits for [***Muh Salmon***](https://dribbble.com/muhsalmon) from dribble for layout ui design
+ w.tho is an online shop website, which a design with layout and typography experiments. made with CSS HTML and javaScript credits to [***Muh Salmon***](https://dribbble.com/muhsalmon) from dribble for layout ui design
 
 ## Features
 
@@ -17,6 +17,14 @@
 
 
 ## Preview
+
+**LAYOUT**
+<p align="center">
+  <img alt="gif" src="layout.gif" width="80%">
+</p>
+get somes photos from my friend photographer
+
+**ORIGINAL DESIGN**
 <p align="center">
   <img alt="gif" src="layout.gif" width="80%">
 </p>
