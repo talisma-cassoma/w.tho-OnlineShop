@@ -27,8 +27,8 @@ let changeButtonColorDelay=1000;
 							let asideBoxtext = document.querySelectorAll(".asidetext")
 							for(let i= 0; i<asideBoxtext.length; i++){//trasitions do texto
 								asideBoxtext[i].classList.add("asidetextTransition")
-								asideBoxtext[i].style.animationDelay = i + 0.5 +'s';
-								asideBoxtext[0].style.animationDelay = 0.5 +'s';
+								asideBoxtext[i].style.animationDelay = (0.9 + i/5) +'s';
+								asideBoxtext[0].style.animationDelay = 0.9 +'s';
 							}
 						overflowRightBox.classList.add("overflow_main_transition");
 						overflowRightBox.style.zIndex = z_Indix;
@@ -49,7 +49,7 @@ let changeButtonColorDelay=1000;
 							let subtittles = document.querySelectorAll(".subtittle")
 							for(let i= 0; i<subtittles.length; i++){
 								subtittles[i].classList.add("textTransition")
-								subtittles[i].style.animationDelay =( i-0.5 )+'s';
+								subtittles[i].style.animationDelay =( 0.5 + i/5)+'s';
 								subtittles[0].style.animationDelay =0.5 + 's'
 							}			
 				}		 	
