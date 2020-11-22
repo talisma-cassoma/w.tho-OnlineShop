@@ -6,10 +6,15 @@
 
 - css animatons
 - css transitions
+- Font Awesome using <i>
 - hyperlink id
-- js class;
 - DOM manipulation
-- dark-mode
+- JavaScript class
+- JavaScript Timing Events
+- Responsive Web Design - Media Queries
+
+
+
 
 ## Preview
 <p align="center">
