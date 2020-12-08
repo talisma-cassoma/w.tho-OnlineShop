@@ -24,7 +24,7 @@
   <img alt="gif" src="/images/layout.gif" width="100%">
 </p>
 
-<p>got some photos from my friend photographer</p>
+<p>got somes photos from my friend photographer</p>
 
 <h4>ORIGINAL DESIGN</h4>
 
