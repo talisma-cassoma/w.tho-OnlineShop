@@ -33,10 +33,10 @@
 </p>
 
 <p align="center">
-  <img alt="pag1" src="https://cdn.dribbble.com/users/1627429/screenshots/11123315/media/ad3dde2f9d06939aaeae56b1545c5185.png" width="80%">
+  <img alt="pag1" src="images/slideOne.png" width="80%">
 </p>
 
 <p align="center">
-  <img alt="pag1" src="https://cdn.dribbble.com/users/1627429/screenshots/11123315/media/3a8e625ca88cde1d557a6b564724f081.png" width="80%">
+  <img alt="pag1" src="images/slidTwo.png" width="80%">
 </p>
 
