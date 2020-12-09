@@ -37,6 +37,6 @@
 </p>
 
 <p align="center">
-  <img alt="pag1" src="images/slidTwo.png" width="80%">
+  <img alt="pag1" src="images/slideTwo.png" width="80%">
 </p>
 
