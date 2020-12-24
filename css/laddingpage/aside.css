@@ -37,23 +37,23 @@ margin: 5vh 5vw 0 5vw;
 	}
 #overflow_photosCtnr > div > div:nth-child(1){
 	grid-area: one;
-	background-image: url("https://instagram.fcmn5-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/123371942_805668290258397_7953208433424507345_n.jpg?_nc_ht=instagram.fcmn5-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=EF8FktHFQSgAX_DkZ0S&tp=19&oh=3f3dd7c32451c2308246f590ba04fb35&oe=5FD1D197");
+	background-image: url("images/1.jpg");
 }
 #overflow_photosCtnr > div > div:nth-child(2){
 	grid-area: two;
-	background-image: url("https://instagram.fcmn5-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/123384306_1757358867760753_6847648929381122631_n.jpg?_nc_ht=instagram.fcmn5-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=yq6GbFTqhckAX_2niVL&tp=19&oh=7a3b632a3e49bf5b85cb009627add89b&oe=5FD2D7C5");
+	background-image: url("images/2.jpg");
 }
 #overflow_photosCtnr > div > div:nth-child(3){
 	grid-area: three;
-	background-image: url("https://instagram.fcmn5-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/123264350_359681082014032_1048019436287600790_n.jpg?_nc_ht=instagram.fcmn5-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=o_NVeW8B2gsAX96RIYw&tp=19&oh=f8353c26ac8506d83b6a908ca8b83844&oe=5FD19448");
+	background-image: url("images/3.jpg");
 }
 #overflow_photosCtnr > div > div:nth-child(4) {
 	grid-area: four;
-	background-image: url("https://instagram.fcmn5-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/123628502_1789221041241221_941419400083411658_n.jpg?_nc_ht=instagram.fcmn5-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=BZq5lGSRB7gAX9JQk-F&tp=19&oh=cce7e04bbae5a77f4aa8a71d019bc874&oe=5FD500B5");
+	background-image: url("images/4.jpg");
 }
 #overflow_photosCtnr > div > div:nth-child(5) {
 	grid-area: five;
-	background-image: url("https://instagram.fcmn5-1.fna.fbcdn.net/v/t51.2885-15/e35/84444185_807427583098998_909145767999694593_n.jpg?_nc_ht=instagram.fcmn5-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=yuUH4UGgZy0AX8-SG3x&tp=18&oh=d5048e5f72ad4ec3e77de1be098bcab7&oe=5FD49910");
+	background-image: url("images/5.jpg");
 }	
 .overflows.photos{
 		position: relative;
