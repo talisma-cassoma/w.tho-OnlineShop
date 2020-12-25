@@ -21,7 +21,7 @@
 <h4>LAYOUT</h4>
 
 <p align="center">
-  <img alt="gif" src="/images/layout.gif" width="100%">
+  <img alt="gif" src="/IMAGES/layout.gif" width="100%">
 </p>
 
 <p>got somes photos from my friend photographer</p>
@@ -29,14 +29,14 @@
 <h4>ORIGINAL DESIGN</h4>
 
 <p align="center">
-  <img alt="gif" src="/images/layoutDesign.gif" width="80%">
+  <img alt="gif" src="/IMAGES/layoutDesign.gif" width="80%">
 </p>
 
 <p align="center">
-  <img alt="pag1" src="images/slideOne.png" width="80%">
+  <img alt="pag1" src="/IMAGES/slideOne.png" width="80%">
 </p>
 
 <p align="center">
-  <img alt="pag1" src="images/slideTwo.png" width="80%">
+  <img alt="pag1" src="/IMAGES/slideTwo.png" width="80%">
 </p>
 
