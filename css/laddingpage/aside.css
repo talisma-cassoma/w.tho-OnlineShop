@@ -37,23 +37,23 @@ margin: 5vh 5vw 0 5vw;
 	}
 #overflow_photosCtnr > div > div:nth-child(1){
 	grid-area: one;
-	background-image: url("images/1.jpg");
+	background-image: url("/IMAGES/1.jpg");
 }
 #overflow_photosCtnr > div > div:nth-child(2){
 	grid-area: two;
-	background-image: url("images/2.jpg");
+	background-image: url("/IMAGES/2.jpg");
 }
 #overflow_photosCtnr > div > div:nth-child(3){
 	grid-area: three;
-	background-image: url("images/3.jpg");
+	background-image: url("/IMAGES/3.jpg");
 }
 #overflow_photosCtnr > div > div:nth-child(4) {
 	grid-area: four;
-	background-image: url("images/4.jpg");
+	background-image: url("/IMAGES/4.jpg");
 }
 #overflow_photosCtnr > div > div:nth-child(5) {
 	grid-area: five;
-	background-image: url("images/5.jpg");
+	background-image: url("/IMAGES/5.jpg");
 }	
 .overflows.photos{
 		position: relative;
